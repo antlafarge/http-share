@@ -1,6 +1,6 @@
 # HTTP-SHARE
 
-## Share a directory through HTTP.
+Share a directory through HTTP.
 
 ## Run
 
