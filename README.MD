@@ -19,6 +19,19 @@ docker run -d \
 - Replace **`<PATH>`** by the absolute path to the directory you want to share.
 - Replace **`<PORT>`** by the http port you will open in your router NAT.
 
+### Example
+
+<pre>
+echo "<b>admin</b>:$(perl -le 'print crypt("<b>MyGreatPassword</b>", "1xzcq")')" > ~/http-share.htpasswd
+
+docker run -d \
+    --name http-share \
+    -p "<b>8080</b>:80" \
+    -v "<b>/mnt/hdd/public</b>:/usr/share/nginx/html:ro" \
+    -v "~/http-share.htpasswd:/etc/nginx/conf.d/.htpasswd:ro" \
+    antlafarge/http-share:latest
+</pre>
+
 ## Build
 
     docker build -t http-share .
