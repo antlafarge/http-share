@@ -9,9 +9,9 @@ echo "<b>&#60;LOGIN&#62;</b>:$(perl -le 'print crypt("<b>&#60;PASSWORD&#62;</b>"
 
 docker run -d \
     --name http-share \
-    -p "<b>&#60;PORT&#62;</b>:80" \
-    -v "<b>&#60;PATH&#62;</b>:/usr/share/nginx/html:ro" \
-    -v "~/http-share.htpasswd:/etc/nginx/conf.d/.htpasswd:ro" \
+    -p <b>&#60;PORT&#62;</b>:80 \
+    -v <b>&#60;PATH&#62;</b>:/usr/share/nginx/html:ro \
+    -v ~/http-share.htpasswd:/etc/nginx/conf.d/.htpasswd:ro \
     antlafarge/http-share:latest
 </pre>
 
@@ -26,9 +26,9 @@ echo "<b>admin</b>:$(perl -le 'print crypt("<b>MyGreatPassword</b>", "1xzcq")')"
 
 docker run -d \
     --name http-share \
-    -p "<b>8080</b>:80" \
-    -v "<b>/mnt/hdd/public</b>:/usr/share/nginx/html:ro" \
-    -v "~/http-share.htpasswd:/etc/nginx/conf.d/.htpasswd:ro" \
+    -p <b>8080</b>:80 \
+    -v <b>/mnt/hdd/public</b>:/usr/share/nginx/html:ro \
+    -v ~/http-share.htpasswd:/etc/nginx/conf.d/.htpasswd:ro \
     antlafarge/http-share:latest
 </pre>
 
