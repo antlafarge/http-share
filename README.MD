@@ -1,10 +1,11 @@
 # HTTP-SHARE
 
-Share a directory through HTTP.
+Share a directory through HTTP (protected by htaccess password).
 
 ## Docker
 
 <pre>
+# Create the login/password to access the http share.
 echo "<b>&#60;LOGIN&#62;</b>:$(perl -le 'print crypt("<b>&#60;PASSWORD&#62;</b>", "1xzcq")')" > ~/http-share.htpasswd
 
 docker run -d \
@@ -28,6 +29,7 @@ docker run -d \
 ### Example
 
 <pre>
+# Create the login/password to access the http share.
 echo "<b>admin</b>:$(perl -le 'print crypt("<b>MyGreatPassword</b>", "1xzcq")')" > ~/http-share.htpasswd
 
 docker run -d \
