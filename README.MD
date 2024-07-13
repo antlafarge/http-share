@@ -118,12 +118,12 @@ docker rmi antlafarge/http-share:<b>latest</b>
 
 <pre>
 cd /path/to/docker-compose.yml/directory/
-docker-compose up -d
+docker compose up -d
 </pre>
 
 ### Compose stop
 
 <pre>
 cd /path/to/docker-compose.yml/directory/
-docker-compose down
+docker compose down
 </pre>
