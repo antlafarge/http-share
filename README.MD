@@ -1,6 +1,6 @@
 # HTTP-SHARE
 
-Share a directory through HTTP (protected by htaccess password).
+Share a directory through HTTP (protected by htaccess password) by using nginx.
 
 ## Docker
 
